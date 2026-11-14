@@ -135,7 +135,7 @@
             font-weight: 800;
         }
 
-        /* মূল পপআপ উইন্ডো (সম্পূর্ণ পপআপে ডার্ক ব্লার শ্যাডো ও বর্ডার) */
+        /* মূল পপআপ উইন্ডো (সম্পূর্ণ বক্সে ডার্ক ব্লার শ্যাডো সহ) */
         .overlay-box {
             position: fixed;
             top: 50%;
@@ -188,11 +188,11 @@
             box-shadow: 0 0 8px #ef4444;
         }
 
-        /* 🎯 গোল্ডেন স্কয়ার বক্সের একদম পারফেক্ট সেন্টার কোঅর্ডিনেট (স্বচ্ছ ব্যাকগ্রাউন্ড) */
+        /* 🎯 প্রেডিকশন এরিয়া ওপরের দিকে এবং বাম দিকে শিফট করা */
         .center-prediction-area {
             position: absolute;
-            top: 131px;
-            left: 74.5%;
+            top: 126px;
+            left: 72.5%;
             transform: translateX(-50%);
             width: 100px;
             height: 90px;
@@ -214,10 +214,10 @@
 
         /* ✨ রুবি ফন্ট ও আরজিবি (RGB) লাইট অ্যানিমেশন টেক্সট */
         .period-display {
-            font-size: 6.5px;
+            font-size: 6px;
             font-weight: 900;
             animation: rgbGlowText 3s infinite;
-            letter-spacing: 0.2px;
+            letter-spacing: 0.1px;
             cursor: pointer;
             text-decoration: underline;
             text-decoration-style: dotted;
@@ -362,7 +362,7 @@
             <!-- পপআপ ব্যাকগ্রাউন্ড ইমেজ -->
             <img src="https://cdn.imageurlgenerator.com/uploads/de9a0e87-0c16-4ecf-8e65-14f1fc9e3d98.png" alt="VIP Popup" class="popup-main-bg-img">
 
-            <!-- ডান দিকের ফ্রেমে সেন্টারে নিখুঁতভাবে পজিশন করা পিরিয়ড ও সিগন্যাল এরিয়া -->
+            <!-- ডান দিকের ফ্রেমে পিরিয়ড ও সিগন্যাল এরিয়া -->
             <div class="center-prediction-area">
                 <div class="period-container">
                     <div class="period-display" id="period-num" onclick="copyPeriodNumber()" title="Click to Copy Period">Loading...</div>
@@ -433,7 +433,7 @@
         }
 
         function copyPeriodNumber() {
-            const periodText = document.getElementById('period-num').innerText;
+            const periodText = document.getElementById('period-num').innerText.replace("Period: ", "");
             if (periodText && periodText !== "Loading...") {
                 navigator.clipboard.writeText(periodText).then(() => {
                     let toast = document.getElementById('copy-toast');
@@ -458,7 +458,7 @@
             
             let dateStr = `${now.getUTCFullYear()}${String(now.getUTCMonth() + 1).padStart(2, '0')}${String(now.getUTCDate()).padStart(2, '0')}`;
             let formattedIndex = String(50000 + periodIndexToday).padStart(5, '0');
-            let fullPeriod = `${dateStr}1000${formattedIndex}`;
+            let fullPeriod = `Period: ${dateStr}1000${formattedIndex}`;
             
             let timeLeft = duration - elapsedInPeriod;
 
@@ -470,7 +470,8 @@
             
             if (fullPeriod !== cachedPeriod) {
                 cachedPeriod = fullPeriod;
-                let seedVal = parseInt(fullPeriod.slice(-5)) || 12345;
+                let rawPeriodNum = fullPeriod.replace("Period: ", "");
+                let seedVal = parseInt(rawPeriodNum.slice(-5)) || 12345;
                 let marketFlowTrend = (seedVal * 31 + Math.floor(Date.now() / 30000)) % 100;
                 
                 let isBig = marketFlowTrend >= 46;
