@@ -135,20 +135,20 @@
             font-weight: 800;
         }
 
-        /* মূল পপআপ উইন্ডো */
+        /* মূল পপআপ উইন্ডো (কম্প্যাক্ট সাইজ) */
         .overlay-box {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 320px;
+            width: 300px;
             display: none;
             z-index: 9999;
             touch-action: none;
             text-align: center;
-            background: rgba(5, 10, 25, 0.85);
-            border-radius: 22px;
-            padding: 8px;
+            background: rgba(5, 10, 25, 0.88);
+            border-radius: 20px;
+            padding: 7px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 215, 0, 0.35);
             backdrop-filter: blur(8px);
             pointer-events: auto;
@@ -168,37 +168,37 @@
 
         .close-btn {
             position: absolute;
-            top: 6px;
-            right: 12px;
+            top: 4px;
+            right: 8px;
             background: #ef4444;
             color: white;
             border: none;
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             border-radius: 50%;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 900;
             cursor: pointer;
             z-index: 25;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 10px #ef4444;
+            box-shadow: 0 0 8px #ef4444;
         }
 
-        /* 🎯 গোল্ডেন ফ্রেমের ফাঁকা স্কয়ার বক্সের সেন্টারে পজিশন করা হলো */
+        /* 🎯 গোল্ডেন ফ্রেমের স্কয়ার বক্সের নিখুঁত সেন্টারিং কোঅর্ডিনেট */
         .center-prediction-area {
             position: absolute;
-            top: 138px;
-            left: 63.5%;
+            top: 135px;
+            left: 63.8%;
             transform: translateX(-50%);
-            width: 115px;
-            height: 100px;
+            width: 110px;
+            height: 95px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 4px;
+            gap: 3px;
             z-index: 10;
         }
 
@@ -211,21 +211,21 @@
 
         /* ✨ রুবি ফন্ট ও আরজিবি (RGB) লাইট অ্যানিমেশন টেক্সট */
         .period-display {
-            font-size: 7.5px;
+            font-size: 7px;
             font-weight: 900;
             animation: rgbGlowText 3s infinite;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.2px;
             cursor: pointer;
             text-decoration: underline;
             text-decoration-style: dotted;
         }
 
         .live-dot {
-            width: 4px;
-            height: 4px;
+            width: 3.5px;
+            height: 3.5px;
             background-color: #22c55e;
             border-radius: 50%;
-            box-shadow: 0 0 6px #22c55e;
+            box-shadow: 0 0 5px #22c55e;
             animation: liveBlink 1s infinite alternate;
         }
 
@@ -235,25 +235,25 @@
         }
 
         .timer-display {
-            font-size: 8.5px;
+            font-size: 8px;
             font-weight: 900;
             animation: rgbGlowText 2.5s infinite;
             background: rgba(0, 0, 0, 0.75);
-            padding: 1px 6px;
+            padding: 1px 5px;
             border-radius: 4px;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            letter-spacing: 0.5px;
+            letter-spacing: 0.4px;
         }
 
         /* 🔥 বিগ / স্মল এর জন্য অলটাইম আরজিবি কালার মিক্স গ্লোয়িং ইফেক্ট */
         .solid-big-small {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 900;
             animation: rgbGlowText 2s infinite;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.2px;
             line-height: 1;
-            padding: 2px 8px;
-            border-radius: 6px;
+            padding: 2px 6px;
+            border-radius: 5px;
             background: rgba(0, 0, 0, 0.65);
             border: 1px solid rgba(255, 255, 255, 0.25);
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
@@ -269,13 +269,13 @@
         }
 
         .official-num-badge {
-            width: 18px;
-            height: 18px;
+            width: 17px;
+            height: 17px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 9.5px;
+            font-size: 9px;
             font-weight: 900;
             color: #ffffff;
             text-shadow: 1px 1px 2px #000;
@@ -287,74 +287,70 @@
         .bg-violet { background: linear-gradient(135deg, #a855f7, #6b21a8); border: 1.5px solid #d8b4fe; }
 
         .single-market-banner {
-            margin: 4px 6px;
+            margin: 3px 4px;
             background: linear-gradient(135deg, #ffd700, #b8860b);
             color: #000;
-            border-radius: 8px;
-            padding: 5px 0;
-            font-size: 9.5px;
+            border-radius: 7px;
+            padding: 4px 0;
+            font-size: 9px;
             font-weight: 900;
             text-align: center;
-            box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
-            letter-spacing: 1px;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            letter-spacing: 0.8px;
         }
 
-        /* নিচের বাটন সেকশন */
+        /* নিচের বাটন সেকশন (হাইড্রোজেন ডিজাইন: হাইড উপরে, টেলিগ্রাম নিচে) */
         .bottom-action-bar {
-            margin-top: 4px;
+            margin-top: 3px;
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 4px;
             padding: 0 4px;
         }
 
-        .button-row {
-            display: flex;
-            gap: 6px;
-        }
-
         .action-btn {
-            flex: 1;
+            width: 100%;
             background: rgba(0, 0, 0, 0.9);
             border: 1px solid #ffd700;
             color: #ffd700;
-            border-radius: 10px;
-            padding: 6px 0;
+            border-radius: 9px;
+            padding: 5px 0;
             font-size: 8.5px;
             font-weight: 900;
             cursor: pointer;
             box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
             letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         .telegram-join-btn {
             background: linear-gradient(135deg, #ffd700, #b8860b);
             color: #000;
-            border-radius: 12px;
-            padding: 8px 0;
-            font-size: 10px;
+            border-radius: 10px;
+            padding: 7px 0;
+            font-size: 9.5px;
             font-weight: 900;
             text-decoration: none;
             letter-spacing: 1px;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+            box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 5px;
             text-transform: uppercase;
         }
 
         #copy-toast {
             position: absolute;
-            bottom: 6px;
+            bottom: 4px;
             left: 50%;
             transform: translateX(-50%);
             background: #22c55e;
             color: #fff;
-            font-size: 7.5px;
+            font-size: 7px;
             font-weight: 900;
-            padding: 2px 8px;
-            border-radius: 4px;
+            padding: 2px 6px;
+            border-radius: 3px;
             display: none;
             z-index: 20;
         }
@@ -409,12 +405,10 @@
         </div>
 
         <div class="bottom-action-bar">
-            <div class="button-row">
-                <button class="action-btn" onclick="hidePopup()">HIDE</button>
-            </div>
+            <button class="action-btn" onclick="hidePopup()">HIDE</button>
             <a href="https://t.me/BDT5847" target="_blank" class="telegram-join-btn">
                 <!-- অফিশিয়াল টেলিগ্রাম এসভিজি আইকন -->
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 3.5L2 11.2L9.5 14.5L18 7.5L11 14.5V19.5L14.5 16L19 19.5L21.5 3.5Z" fill="#000"/></svg>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 3.5L2 11.2L9.5 14.5L18 7.5L11 14.5V19.5L14.5 16L19 19.5L21.5 3.5Z" fill="#000"/></svg>
                 JOIN TELEGRAM
             </a>
         </div>
@@ -520,10 +514,10 @@
 
             if (timeLeft >= 28) {
                 sizeEl.innerText = "WAITING...";
-                sizeEl.style.fontSize = "11px";
+                sizeEl.style.fontSize = "10.5px";
                 numEl.style.display = "none";
             } else {
-                sizeEl.style.fontSize = "17px";
+                sizeEl.style.fontSize = "16px";
                 sizeEl.innerText = cachedPrediction.type;
 
                 let luckyNum = cachedPrediction.num;
