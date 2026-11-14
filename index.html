@@ -135,7 +135,7 @@
             font-weight: 800;
         }
 
-        /* মূল পপআপ উইন্ডো (সম্পূর্ণ ট্রান্সপারেন্ট, কোনো এক্সট্রা বক্স বা শ্যাডো নেই) */
+        /* মূল পপআপ উইন্ডো */
         .overlay-box {
             position: fixed;
             top: 50%;
@@ -146,31 +146,31 @@
             z-index: 9999;
             touch-action: none;
             text-align: center;
-            background: transparent;
-            padding: 0;
+            background: rgba(5, 10, 25, 0.85);
+            border-radius: 22px;
+            padding: 7px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.75), 0 0 25px rgba(255, 215, 0, 0.35);
+            backdrop-filter: blur(8px);
             pointer-events: auto;
-            box-shadow: none;
-            border: none;
+            border: 1px solid rgba(255, 215, 0, 0.4);
         }
 
         .popup-relative-wrapper {
             position: relative;
             width: 100%;
-            background: transparent;
-            filter: none;
         }
 
         .popup-main-bg-img {
             width: 100%;
             display: block;
             pointer-events: none;
-            background: transparent;
+            border-radius: 16px;
         }
 
         .close-btn {
             position: absolute;
-            top: 10px;
-            right: 12px;
+            top: 6px;
+            right: 10px;
             background: #ef4444;
             color: white;
             border: none;
@@ -190,7 +190,7 @@
         /* 🎯 পপআপের ভেতরের গোল্ডেন স্কয়ার বক্সের একদম নিখুঁত সেন্টারিং কোঅর্ডিনেট */
         .center-prediction-area {
             position: absolute;
-            top: 133px;
+            top: 132px;
             left: 63.8%;
             transform: translateX(-50%);
             width: 105px;
@@ -289,7 +289,7 @@
 
         /* পপআপের ঠিক নিচে একদম ঘেঁষে অফিশিয়াল টেলিগ্রাম লোগোসহ বাটন */
         .bottom-action-bar {
-            margin-top: 4px;
+            margin-top: 5px;
             display: flex;
             justify-content: center;
             width: 100%;
@@ -304,7 +304,7 @@
             font-weight: 900;
             text-decoration: none;
             letter-spacing: 0.8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 215, 0, 0.5);
+            box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
             display: inline-flex;
             align-items: center;
             justify-content: center;
